@@ -2,6 +2,8 @@
 
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration
@@ -34,7 +36,14 @@ return new class extends Migration
             $table->text('user_agent')->nullable();
             $table->longText('payload');
             $table->integer('last_activity')->index();
-        });
+        }); // Insertar un usuario por defecto
+        DB::table('users')->insert([
+            'name' => 'Administrador',
+            'email' => 'admin@reba.com',
+            'password' => Hash::make('secret'), // Hashear la contraseña
+            'created_at' => now(),
+            'updated_at' => now(),
+        ]);
     }
 
     /**
