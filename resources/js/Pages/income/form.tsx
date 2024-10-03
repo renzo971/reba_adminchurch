@@ -19,7 +19,6 @@ export default function Form({
         const decimalValue = parseFloat(e.target.value); // Convert to decimal
         setData({ ...data, amount: decimalValue });
     };
-    console.log(data);
 
     return (
         <div className="p-6.5">

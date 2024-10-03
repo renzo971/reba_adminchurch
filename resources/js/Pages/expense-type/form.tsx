@@ -5,7 +5,7 @@ import TextInput from "@/Components/TextInput";
 
 export default function Form({ setData, errors, data, processing }: any) {
     return (
-        <>
+        <div className="p-6.5">
             <div>
                 <InputLabel htmlFor="name" value="Name" />
 
@@ -28,6 +28,6 @@ export default function Form({ setData, errors, data, processing }: any) {
                     Registrar
                 </PrimaryButton>
             </div>
-        </>
+        </div>
     );
 }

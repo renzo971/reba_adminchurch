@@ -6,7 +6,6 @@ import ChartOne from "@/Components/Charts/ChartOne";
 import ChartTwo from "@/Components/Charts/ChartTwo";
 import ChartThree from "@/Components/Charts/ChartThree";
 import MapOne from "@/Components/Maps/MapOne";
-import ChatCard from "@/Components/Chat/ChatCard";
 
 export default function Dashboard({ auth }: PageProps) {
     return (

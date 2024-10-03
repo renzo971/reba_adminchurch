@@ -6,6 +6,7 @@ use App\Models\User;
 use App\Http\Requests\UserRequest;
 use Illuminate\Support\Facades\Redirect;
 use Inertia\Inertia;
+use Illuminate\Http\Request;
 
 /**
  * Class UserController
@@ -39,7 +40,7 @@ class UserController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store($request)
+    public function store(UserRequest $request)
     {
         User::create($request->validated());
 
@@ -73,7 +74,7 @@ class UserController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update($request, User $user)
+    public function update(UserRequest $request, User $user)
     {
         $user->update($request->validated());
 

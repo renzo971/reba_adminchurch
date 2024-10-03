@@ -64,7 +64,7 @@ class ExpenseTypeController extends Controller
     {
         $expenseType = ExpenseType::find($id);
 
-        return Inertia::render('exense-type/edit', [
+        return Inertia::render('expense-type/edit', [
             'expenseType' => $expenseType,
         ]);
     }

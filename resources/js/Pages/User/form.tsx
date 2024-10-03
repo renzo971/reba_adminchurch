@@ -4,8 +4,8 @@ import PrimaryButton from "@/Components/PrimaryButton";
 import TextInput from "@/Components/TextInput";
 export default function Form({ setData, errors, data, processing }: any) {
     return (
-        <>
-            <div>
+        <div className="p-6.5">
+            <div className="mt-4">
                 <InputLabel htmlFor="name" value="Name" />
 
                 <TextInput
@@ -86,6 +86,6 @@ export default function Form({ setData, errors, data, processing }: any) {
                     Register
                 </PrimaryButton>
             </div>
-        </>
+        </div>
     );
 }

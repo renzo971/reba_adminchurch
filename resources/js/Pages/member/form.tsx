@@ -6,8 +6,8 @@ import { Link } from "@inertiajs/react";
 
 export default function Form({ setData, errors, data, processing }: any) {
     return (
-        <>
-            <div>
+        <div className="p-6.5">
+            <div className="mt-4">
                 <InputLabel htmlFor="name" value="Name" />
 
                 <TextInput
@@ -23,7 +23,7 @@ export default function Form({ setData, errors, data, processing }: any) {
 
                 <InputError message={errors.name} className="mt-2" />
             </div>
-            <div>
+            <div className="mt-4">
                 <InputLabel htmlFor="address" value="Address" />
 
                 <TextInput
@@ -32,14 +32,13 @@ export default function Form({ setData, errors, data, processing }: any) {
                     value={data.address}
                     className="block w-full mt-1"
                     autoComplete="address"
-                    isFocused={true}
                     onChange={(e) => setData("address", e.target.value)}
                     required
                 />
 
                 <InputError message={errors.address} className="mt-2" />
             </div>
-            <div>
+            <div className="mt-4">
                 <InputLabel htmlFor="phone" value="Phone" />
 
                 <TextInput
@@ -48,7 +47,6 @@ export default function Form({ setData, errors, data, processing }: any) {
                     value={data.phone}
                     className="block w-full mt-1"
                     autoComplete="phone"
-                    isFocused={true}
                     onChange={(e) => setData("phone", e.target.value)}
                     required
                 />
@@ -76,6 +74,6 @@ export default function Form({ setData, errors, data, processing }: any) {
                     Crear miembro
                 </PrimaryButton>
             </div>
-        </>
+        </div>
     );
 }

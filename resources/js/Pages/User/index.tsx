@@ -21,7 +21,7 @@ export default function index({ auth, users }: any) {
             <Head title="Ver usuarios" />
 
             <div className="rounded-sm border border-stroke bg-white px-5 pt-6 pb-2.5 shadow-default dark:border-strokedark dark:bg-boxdark sm:px-7.5 xl:pb-1">
-                <div className="sm:flex sm:items-center pb-3">
+                <div className="pb-3 sm:flex sm:items-center">
                     <div className="sm:flex-auto">
                         <h4 className="text-xl font-semibold text-black dark:text-white">
                             Listado de Ingresos
@@ -41,7 +41,10 @@ export default function index({ auth, users }: any) {
                     <table className="w-full table-auto">
                         <thead>
                             <tr>
-                                <th className="min-w-[220px] py-4 px-4 font-medium text-black dark:text-white">
+                                <th
+                                    scope="col"
+                                    className="py-3 pl-4 pr-3 font-medium tracking-wide text-left text-black dark:text-white"
+                                >
                                     Nro
                                 </th>
 
@@ -52,7 +55,7 @@ export default function index({ auth, users }: any) {
                                     Email
                                 </th>
 
-                                <th className="py-4 px-4 font-medium text-black dark:text-white">
+                                <th className="px-4 py-4 font-medium text-black dark:text-white">
                                     Acciones
                                 </th>
                             </tr>
